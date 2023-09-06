@@ -37,6 +37,7 @@
         display: grid;
         grid-template-rows: auto 1fr auto;
         width: 300px;
+        justify-items: center; /*  centra el icono del sobre de carta o envelope  */
       }
 
       .logo {
@@ -88,6 +89,33 @@
           display: block;
         }
       }
+
+      .email-image {
+        width: 132px;
+        height: 132px;
+        border-radius: 50%;
+        background-color: var(--text-input-field);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+      .email-image img{ /*   se le da una dimension de 80px a la circunferencia  en el fonto del sobre  */
+        width: 80px;
+      }
+      .resend{
+        font-size: var(--sm);
+      }
+
+      .resend span{
+        color: var(--very--light--pink);
+      }
+
+      .resend  a {
+        color: var(--hospital-green);
+        text-decoration: none;
+      }
+      
     </style>
   </head>
   <body>
@@ -102,20 +130,17 @@
         <p class="subtitle">
           Please Check your inbox for instructions on how to reset the password
         </p>
-      
+
         <div class="email-image">
           <img src="./Platzi_YardSale_Icons/email.svg" alt="" />
         </div>
 
-        <button class="primary-button login-button">
-            Login
-        </button>
+        <button class="primary-button login-button">Login</button>
 
         <p>
-            <span>Didn't no receive the email?</span>
-            <a href="">Resend</a>
+          <span>Didn't no receive the email?</span>
+          <a href="">Resend</a>
         </p>
-
       </div>
     </div>
   </body>
