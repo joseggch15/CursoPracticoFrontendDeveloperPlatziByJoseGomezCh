@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --black: #000000;
+        --white: #ffffff;
+        --black: #000000;
+        --very--light--pink: #c7c7c7; /* Se asigna desde la pagina web https://scene.zeplin.io/project/60afeeed20af1378ed046538   */
+        --text-input-field: #f7f7f7;
+        --hospital-green: #acd9b2;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+      }
+      body {
+        margin: 0;
+        font-family: "Quicksand", sans-serif;
+      }
+      .login {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+
+      .form-container {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        width: 300px;
+      }
+
+      .logo {
+        width: 150px;
+        margin-bottom: 48px;
+        justify-self: center;
+        display: none;
+      }
+
+      .title {
+        font-size: var(--lg);
+        margin-bottom: 12px;
+        justify-self: center;
+        display: none;
+      }
+
+      .subtitle {
+        color: var(--very--light--pink);
+        font-size: var(--md);
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 32px;
+        text-align: center;
+      }
+
+      .label {
+        font-size: var(--sm);
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+
+      .input{
+        background-color: var(--text-input-field);
+        border: none;
+        border-radius: 8px;
+        height: 30px;
+        font-size: var(--md);
+        padding: 6px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="login">
+      <div class="form-container">
+        <img src="./Platzi_YardSale_Logos/logo_yard_sale.svg" alt="logo" />
+        <h1 class="title">Create a new password</h1>
+        <p class="subtitle">Enter a new password for your account</p>
+        <!-- se crea la etiqueta form para crear los campos donde se llenara la password -->
+        <form action="/" class="form">
+          <!-- el label permite crear el cuadro donde se ingresa la password y le da la etiqueta de contrasena -->
+          <label for="password" class="label">Password</label>
+          <!-- input genera la caracterizacion de ****** por haber consignado tipo pass -->
+          <input
+            type="password"
+            id="password"
+            placeholder="**********"
+            class="input input-password"
+          />
+
+          <label for="new-password" class="label">Password</label>
+          <input
+            type="password"
+            id="new-password"
+            placeholder="**********"
+            class="input input-password"
+          />
+
+          <!-- value es el valor que queremos imprimir y type es tipo envio, generando asi un boton  -->
+          <input
+            type="submit"
+            value="Confirm"
+            class="primary-button login-button"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
